@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="192" height="192">
+  <path d="M20,16v3l-1.981,1H5.984L4,19v-3l1.35-1c0.55-1.18,1.76-2,3.15-2h7c1.39,0,2.6,0.82,3.15,2L20,16z" opacity=".35" fill="#FFFFFF" />
+  <path d="M8.5,20h-5C2.12,20,1,18.88,1,17.5S2.12,15,3.5,15h1.85C5.12,15.45,5,15.96,5,16.5C5,18.43,6.57,20,8.5,20z" fill="#FFFFFF" />
+  <path d="M23,17.5c0,1.38-1.12,2.5-2.5,2.5h-5c1.93,0,3.5-1.57,3.5-3.5c0-0.54-0.12-1.05-0.35-1.5h1.85C21.88,15,23,16.12,23,17.5z" fill="#FFFFFF" />
+  <circle cx="12" cy="7" r="4" opacity=".35" fill="#FFFFFF" />
+  <circle cx="20" cy="9" r="3" opacity=".35" fill="#FFFFFF" />
+  <circle cx="4" cy="9" r="3" opacity=".35" fill="#FFFFFF" />
+</svg>

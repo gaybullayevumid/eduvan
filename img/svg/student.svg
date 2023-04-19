@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="192" height="192">
+  <path d="M22,21H2c-0.552,0-1-0.448-1-1v-2c0-0.552,0.448-1,1-1h20c0.552,0,1,0.448,1,1v2C23,20.552,22.552,21,22,21z" opacity=".35" fill="#FFFFFF" />
+  <circle cx="12" cy="7" r="4" opacity=".35" fill="#FFFFFF" />
+  <path d="M8,13c-1.657,0-3,1.343-3,3v1h7L8,13L8,13z" fill="#FFFFFF" />
+  <polygon points="8,13 12,17 16,13" opacity=".35" fill="#FFFFFF" />
+  <path d="M21.019,4.093c-0.776-0.287-1.639,0.111-1.926,0.889L16,13l-4,4h7v-3l2.908-7.981C22.194,5.241,21.796,4.379,21.019,4.093z" fill="#FFFFFF" />
+</svg>

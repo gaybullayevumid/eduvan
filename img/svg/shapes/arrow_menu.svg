@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="20px" height="80px" viewBox="0 0 20 80" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M0 0L20 0L20 80L0 80L0 0Z" id="path_1" />
+    <clipPath id="mask_1">
+      <use xlink:href="#path_1" />
+    </clipPath>
+  </defs>
+  <g id="arrow_menu">
+    <path d="M0 0L20 0L20 80L0 80L0 0Z" id="Фон" fill="#FFFFFF" fill-opacity="0" fill-rule="evenodd" stroke="none" />
+    <path d="M16.038 79.9345L16 79.9345L16 78.4845C15.7983 73.9007 14.8306 69.345 13.1141 64.8991C11.3158 60.2547 8.7041 55.762 5.33101 51.5106C2.18288 48.0061 0.35535 44.0604 0 40.0006C0.355206 35.9409 2.18275 31.9951 5.33102 28.4907C8.70408 24.2391 11.3157 19.7463 13.114 15.1017C14.831 10.6559 15.7988 6.10018 16 1.51615L16 0L20 0L20 79.9345L16.039 79.9345L16.039 80L16.038 79.9345L16.038 79.9345Z" id="Фигура" fill="#102031" stroke="none" />
+  </g>
+</svg>
