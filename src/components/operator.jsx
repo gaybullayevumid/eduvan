@@ -4,7 +4,6 @@ import Table from './elements/table';
 import AddStudent from "./elements/add_student";
 import regTable from './elements/regTable'
 import regTable2 from './elements/regTable2'
-import StudentsData from './students.json'
 
 
 export default function Static() {
@@ -43,7 +42,8 @@ export default function Static() {
                             </Tab>
                         </TabList>
                         <TabPanel>
-                            <section className="directions">
+                            <Table />
+                            {/* <section className="directions">
                                 <ul className="direction_items">
                                     <h1 className="title">Guruhlar Ro'yxati</h1>
                                     <li>
@@ -138,7 +138,7 @@ export default function Static() {
                                         </tbody>
                                     </table>
                                 </div>
-                            </section>
+                            </section> */}
                         </TabPanel>
                     </Tabs>
                 </article>
