@@ -8,20 +8,6 @@ import StudentsData from './students.json'
 
 
 export default function Static() {
-    const [course, setCourse] = useState(StudentsData['savodxonlik']);
-    const choosCourse = (key) => {
-        if (StudentsData[key]) {
-            setCourse(StudentsData[key]);
-        }
-    };
-
-    const [group, setGroup] = useState(course[0]);
-    const choosGroup = (id) => {
-        if (id < course.length) {
-            setGroup(course[id]);
-        }
-    };
-
     return (
         <>
             <section className="operator">
@@ -31,27 +17,27 @@ export default function Static() {
                 <article className="new_groups_list">
                     <Tabs>
                         <TabList>
-                            <Tab onClick={() => choosCourse('savodxonlik')}>
+                            <Tab>
                                 <span><img src="img/svg/savodxonlik.svg" alt="" /></span>
                                 Savodxonlik
                             </Tab>
-                            <Tab onClick={() => choosCourse('frontend')}>
+                            <Tab>
                                 <span><img src="img/svg/dev.svg" alt="" /></span>
                                 Frontend
                             </Tab>
-                            <Tab onClick={() => choosCourse('backend')}>
+                            <Tab>
                                 <span><img src="img/svg/layers.svg" alt="" /></span>
                                 Backend
                             </Tab>
-                            <Tab onClick={() => choosCourse('mobil')}>
+                            <Tab>
                                 <span><img src="img/svg/mobile.svg" alt="" /></span>
                                 Mobil
                             </Tab>
-                            <Tab onClick={() => choosCourse('grafik_dizayn')}>
+                            <Tab>
                                 <span><img src="img/svg/design.svg" alt="" /></span>
                                 Grafik Dizayn
                             </Tab>
-                            <Tab onClick={() => choosCourse('3d_max')}>
+                            <Tab>
                                 <span><img src="img/svg/3d.svg" alt="" /></span>
                                 3d Max
                             </Tab>
@@ -65,45 +51,38 @@ export default function Static() {
                                             <span className="icon">
                                                 <img src="img/svg/savodxonlik.svg" alt="" />
                                             </span>
-                                            {StudentsData.savodxonlik[0].turi}
+                                            Savodxonlik
                                             <span className="sub_arrow"></span>
                                         </a>
-                                        {course.map((data, id) => (
-                                            <ul className="direction_groups">
-                                                <li>
-                                                    <a href="#" onClick={() => choosGroup(`${data.id}`)}>{data.id + 1}-guruh</a>
-                                                </li>
-                                            </ul>
-                                        ))}
                                     </li>
                                 </ul>
                                 <div className="direction_item_content">
                                     <div className="direction_item_group_title">
-                                        {group.nomi}
+                                        Frontend
                                         <ul className="title_items">
                                             <li>
                                                 <span>
                                                     <img src="./img/svg/check.svg" alt="" />
                                                 </span>
-                                                {group.tuzilishi.sana}
+                                                sana
                                             </li>
                                             <li>
                                                 <span>
                                                     <img src="./img/svg/days.svg" alt="" />
                                                 </span>
-                                                {group.tuzilishi.kunlar}
+                                                kunlar
                                             </li>
                                             <li>
                                                 <span>
                                                     <img src="./img/svg/time.svg" alt="" />
                                                 </span>
-                                                {group.tuzilishi.soat}
+                                                soat
                                             </li>
                                             <li>
                                                 <span>
                                                     <img src="./img/svg/student.svg" alt="" />
                                                 </span>
-                                                {group['o\'quvchilar'].length} ta
+                                                10 ta
                                             </li>
                                         </ul>
                                     </div>
@@ -120,417 +99,42 @@ export default function Static() {
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            {group["o'quvchilar"].map((data, id) => (
-                                                <tr>
-                                                    <td><span>{data.id}</span></td>
-                                                    <td><span>{data.ismi} {data.familiyasi} {data.sharifi}</span></td>
-                                                    <td><span>{data.telefon1}</span></td>
-                                                    <td><span>{data.telefon2}</span></td>
-                                                    <td><span>{data.chegirma}</span></td>
-                                                    <td><span>{data.azolik_sanasi}</span></td>
-                                                    <td><span><a href={data.hujjat} download={`${data.ismi}_${data.familiyasi}_${data.sharifi}.jpg`}>Yuklab olish</a></span></td>
-                                                </tr>
-                                            ))}
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </section>
-                        </TabPanel>
-                        <TabPanel>
-                            <section className="directions">
-                                <ul className="direction_items">
-                                    <h1 className="title">Guruhlar Ro'yxati</h1>
-                                    <li>
-                                        <a href="#">
-                                            <span className="icon">
-                                                <img src="img/svg/savodxonlik.svg" alt="" />
-                                            </span>
-                                            {group.turi}
-                                            <span className="sub_arrow"></span>
-                                        </a>
-                                        {course.map((data, id) => (
-                                            <ul className="direction_groups">
-                                                <li>
-                                                    <a href="#" onClick={() => choosGroup(`${data.id}`)}>{data.id + 1}-guruh</a>
-                                                </li>
-                                            </ul>
-                                        ))}
-                                    </li>
-                                </ul>
-                                <div className="direction_item_content">
-                                    <div className="direction_item_group_title">
-                                        {group.nomi}
-                                        <ul className="title_items">
-                                            <li>
-                                                <span>
-                                                    <img src="./img/svg/check.svg" alt="" />
-                                                </span>
-                                                {group.tuzilishi.sana}
-                                            </li>
-                                            <li>
-                                                <span>
-                                                    <img src="./img/svg/days.svg" alt="" />
-                                                </span>
-                                                {group.tuzilishi.kunlar}
-                                            </li>
-                                            <li>
-                                                <span>
-                                                    <img src="./img/svg/time.svg" alt="" />
-                                                </span>
-                                                {group.tuzilishi.soat}
-                                            </li>
-                                            <li>
-                                                <span>
-                                                    <img src="./img/svg/student.svg" alt="" />
-                                                </span>
-                                                {group['o\'quvchilar'].length} ta
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <table className="direction_item_group_users">
-                                        <thead>
                                             <tr>
-                                                <th>T/R</th>
-                                                <th>F.I.SH</th>
-                                                <th>Telefon</th>
-                                                <th>Telefon++</th>
-                                                <th>Chegirma</th>
-                                                <th>Azolik Sanasi</th>
-                                                <th>Hujjat</th>
+                                                <td><span>1</span></td>
+                                                <td><span>Rustamov Muxriddin</span></td>
+                                                <td><span>+998 90 620 29 19</span></td>
+                                                <td><span>+998 90 618 29 19</span></td>
+                                                <td><span>10</span></td>
+                                                <td><span>15.04.2023</span></td>
+                                                <td><span>Yuklab olish</span></td>
                                             </tr>
-                                        </thead>
-                                        <tbody>
-                                            {group["o'quvchilar"].map((data, id) => (
-                                                <tr>
-                                                    <td><span>{data.id}</span></td>
-                                                    <td><span>{data.ismi} {data.familiyasi} {data.sharifi}</span></td>
-                                                    <td><span>{data.telefon1}</span></td>
-                                                    <td><span>{data.telefon2}</span></td>
-                                                    <td><span>{data.chegirma}</span></td>
-                                                    <td><span>{data.azolik_sanasi}</span></td>
-                                                    <td><span><a href={data.hujjat} download={`${data.ismi}_${data.familiyasi}_${data.sharifi}.jpg`}>Yuklab olish</a></span></td>
-                                                </tr>
-                                            ))}
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </section>
-                        </TabPanel>
-                        <TabPanel>
-                            <section className="directions">
-                                <ul className="direction_items">
-                                    <h1 className="title">Guruhlar Ro'yxati</h1>
-                                    <li>
-                                        <a href="#">
-                                            <span className="icon">
-                                                <img src="img/svg/savodxonlik.svg" alt="" />
-                                            </span>
-                                            {group.turi}
-                                            <span className="sub_arrow"></span>
-                                        </a>
-                                        {course.map((data, id) => (
-                                            <ul className="direction_groups">
-                                                <li>
-                                                    <a href="#" onClick={() => choosGroup(`${data.id}`)}>{data.id + 1}-guruh</a>
-                                                </li>
-                                            </ul>
-                                        ))}
-                                    </li>
-                                </ul>
-                                <div className="direction_item_content">
-                                    <div className="direction_item_group_title">
-                                        {group.nomi}
-                                        <ul className="title_items">
-                                            <li>
-                                                <span>
-                                                    <img src="./img/svg/check.svg" alt="" />
-                                                </span>
-                                                {group.tuzilishi.sana}
-                                            </li>
-                                            <li>
-                                                <span>
-                                                    <img src="./img/svg/days.svg" alt="" />
-                                                </span>
-                                                {group.tuzilishi.kunlar}
-                                            </li>
-                                            <li>
-                                                <span>
-                                                    <img src="./img/svg/time.svg" alt="" />
-                                                </span>
-                                                {group.tuzilishi.soat}
-                                            </li>
-                                            <li>
-                                                <span>
-                                                    <img src="./img/svg/student.svg" alt="" />
-                                                </span>
-                                                {group['o\'quvchilar'].length} ta
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <table className="direction_item_group_users">
-                                        <thead>
                                             <tr>
-                                                <th>T/R</th>
-                                                <th>F.I.SH</th>
-                                                <th>Telefon</th>
-                                                <th>Telefon++</th>
-                                                <th>Chegirma</th>
-                                                <th>Azolik Sanasi</th>
-                                                <th>Hujjat</th>
+                                                <td><span>1</span></td>
+                                                <td><span>Rustamov Muxriddin</span></td>
+                                                <td><span>+998 90 620 29 19</span></td>
+                                                <td><span>+998 90 618 29 19</span></td>
+                                                <td><span>10</span></td>
+                                                <td><span>15.04.2023</span></td>
+                                                <td><span>Yuklab olish</span></td>
                                             </tr>
-                                        </thead>
-                                        <tbody>
-                                            {group["o'quvchilar"].map((data, id) => (
-                                                <tr>
-                                                    <td><span>{data.id}</span></td>
-                                                    <td><span>{data.ismi} {data.familiyasi} {data.sharifi}</span></td>
-                                                    <td><span>{data.telefon1}</span></td>
-                                                    <td><span>{data.telefon2}</span></td>
-                                                    <td><span>{data.chegirma}</span></td>
-                                                    <td><span>{data.azolik_sanasi}</span></td>
-                                                    <td><span><a href={data.hujjat} download={`${data.ismi}_${data.familiyasi}_${data.sharifi}.jpg`}>Yuklab olish</a></span></td>
-                                                </tr>
-                                            ))}
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </section>
-                        </TabPanel>
-                        <TabPanel>
-                            <section className="directions">
-                                <ul className="direction_items">
-                                    <h1 className="title">Guruhlar Ro'yxati</h1>
-                                    <li>
-                                        <a href="#">
-                                            <span className="icon">
-                                                <img src="img/svg/savodxonlik.svg" alt="" />
-                                            </span>
-                                            {group.turi}
-                                            <span className="sub_arrow"></span>
-                                        </a>
-                                        {course.map((data, id) => (
-                                            <ul className="direction_groups">
-                                                <li>
-                                                    <a href="#" onClick={() => choosGroup(`${data.id}`)}>{data.id + 1}-guruh</a>
-                                                </li>
-                                            </ul>
-                                        ))}
-                                    </li>
-                                </ul>
-                                <div className="direction_item_content">
-                                    <div className="direction_item_group_title">
-                                        {group.nomi}
-                                        <ul className="title_items">
-                                            <li>
-                                                <span>
-                                                    <img src="./img/svg/check.svg" alt="" />
-                                                </span>
-                                                {group.tuzilishi.sana}
-                                            </li>
-                                            <li>
-                                                <span>
-                                                    <img src="./img/svg/days.svg" alt="" />
-                                                </span>
-                                                {group.tuzilishi.kunlar}
-                                            </li>
-                                            <li>
-                                                <span>
-                                                    <img src="./img/svg/time.svg" alt="" />
-                                                </span>
-                                                {group.tuzilishi.soat}
-                                            </li>
-                                            <li>
-                                                <span>
-                                                    <img src="./img/svg/student.svg" alt="" />
-                                                </span>
-                                                {group['o\'quvchilar'].length} ta
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <table className="direction_item_group_users">
-                                        <thead>
                                             <tr>
-                                                <th>T/R</th>
-                                                <th>F.I.SH</th>
-                                                <th>Telefon</th>
-                                                <th>Telefon++</th>
-                                                <th>Chegirma</th>
-                                                <th>Azolik Sanasi</th>
-                                                <th>Hujjat</th>
+                                                <td><span>1</span></td>
+                                                <td><span>Rustamov Muxriddin</span></td>
+                                                <td><span>+998 90 620 29 19</span></td>
+                                                <td><span>+998 90 618 29 19</span></td>
+                                                <td><span>10</span></td>
+                                                <td><span>15.04.2023</span></td>
+                                                <td><span>Yuklab olish</span></td>
                                             </tr>
-                                        </thead>
-                                        <tbody>
-                                            {group["o'quvchilar"].map((data, id) => (
-                                                <tr>
-                                                    <td><span>{data.id}</span></td>
-                                                    <td><span>{data.ismi} {data.familiyasi} {data.sharifi}</span></td>
-                                                    <td><span>{data.telefon1}</span></td>
-                                                    <td><span>{data.telefon2}</span></td>
-                                                    <td><span>{data.chegirma}</span></td>
-                                                    <td><span>{data.azolik_sanasi}</span></td>
-                                                    <td><span><a href={data.hujjat} download={`${data.ismi}_${data.familiyasi}_${data.sharifi}.jpg`}>Yuklab olish</a></span></td>
-                                                </tr>
-                                            ))}
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </section>
-                        </TabPanel>
-                        <TabPanel>
-                            <section className="directions">
-                                <ul className="direction_items">
-                                    <h1 className="title">Guruhlar Ro'yxati</h1>
-                                    <li>
-                                        <a href="#">
-                                            <span className="icon">
-                                                <img src="img/svg/savodxonlik.svg" alt="" />
-                                            </span>
-                                            {group.turi}
-                                            <span className="sub_arrow"></span>
-                                        </a>
-                                        {course.map((data, id) => (
-                                            <ul className="direction_groups">
-                                                <li>
-                                                    <a href="#" onClick={() => choosGroup(`${data.id}`)}>{data.id + 1}-guruh</a>
-                                                </li>
-                                            </ul>
-                                        ))}
-                                    </li>
-                                </ul>
-                                <div className="direction_item_content">
-                                    <div className="direction_item_group_title">
-                                        {group.nomi}
-                                        <ul className="title_items">
-                                            <li>
-                                                <span>
-                                                    <img src="./img/svg/check.svg" alt="" />
-                                                </span>
-                                                {group.tuzilishi.sana}
-                                            </li>
-                                            <li>
-                                                <span>
-                                                    <img src="./img/svg/days.svg" alt="" />
-                                                </span>
-                                                {group.tuzilishi.kunlar}
-                                            </li>
-                                            <li>
-                                                <span>
-                                                    <img src="./img/svg/time.svg" alt="" />
-                                                </span>
-                                                {group.tuzilishi.soat}
-                                            </li>
-                                            <li>
-                                                <span>
-                                                    <img src="./img/svg/student.svg" alt="" />
-                                                </span>
-                                                {group['o\'quvchilar'].length} ta
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <table className="direction_item_group_users">
-                                        <thead>
                                             <tr>
-                                                <th>T/R</th>
-                                                <th>F.I.SH</th>
-                                                <th>Telefon</th>
-                                                <th>Telefon++</th>
-                                                <th>Chegirma</th>
-                                                <th>Azolik Sanasi</th>
-                                                <th>Hujjat</th>
+                                                <td><span>1</span></td>
+                                                <td><span>Rustamov Muxriddin</span></td>
+                                                <td><span>+998 90 620 29 19</span></td>
+                                                <td><span>+998 90 618 29 19</span></td>
+                                                <td><span>10</span></td>
+                                                <td><span>15.04.2023</span></td>
+                                                <td><span>Yuklab olish</span></td>
                                             </tr>
-                                        </thead>
-                                        <tbody>
-                                            {group["o'quvchilar"].map((data, id) => (
-                                                <tr>
-                                                    <td><span>{data.id}</span></td>
-                                                    <td><span>{data.ismi} {data.familiyasi} {data.sharifi}</span></td>
-                                                    <td><span>{data.telefon1}</span></td>
-                                                    <td><span>{data.telefon2}</span></td>
-                                                    <td><span>{data.chegirma}</span></td>
-                                                    <td><span>{data.azolik_sanasi}</span></td>
-                                                    <td><span><a href={data.hujjat} download={`${data.ismi}_${data.familiyasi}_${data.sharifi}.jpg`}>Yuklab olish</a></span></td>
-                                                </tr>
-                                            ))}
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </section>
-                        </TabPanel>
-                        <TabPanel>
-                            <section className="directions">
-                                <ul className="direction_items">
-                                    <h1 className="title">Guruhlar Ro'yxati</h1>
-                                    <li>
-                                        <a href="#">
-                                            <span className="icon">
-                                                <img src="img/svg/savodxonlik.svg" alt="" />
-                                            </span>
-                                            {group.turi}
-                                            <span className="sub_arrow"></span>
-                                        </a>
-                                        {course.map((data, id) => (
-                                            <ul className="direction_groups">
-                                                <li>
-                                                    <a href="#" onClick={() => choosGroup(`${data.id}`)}>{data.id + 1}-guruh</a>
-                                                </li>
-                                            </ul>
-                                        ))}
-                                    </li>
-                                </ul>
-                                <div className="direction_item_content">
-                                    <div className="direction_item_group_title">
-                                        {group.nomi}
-                                        <ul className="title_items">
-                                            <li>
-                                                <span>
-                                                    <img src="./img/svg/check.svg" alt="" />
-                                                </span>
-                                                {group.tuzilishi.sana}
-                                            </li>
-                                            <li>
-                                                <span>
-                                                    <img src="./img/svg/days.svg" alt="" />
-                                                </span>
-                                                {group.tuzilishi.kunlar}
-                                            </li>
-                                            <li>
-                                                <span>
-                                                    <img src="./img/svg/time.svg" alt="" />
-                                                </span>
-                                                {group.tuzilishi.soat}
-                                            </li>
-                                            <li>
-                                                <span>
-                                                    <img src="./img/svg/student.svg" alt="" />
-                                                </span>
-                                                {group['o\'quvchilar'].length} ta
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <table className="direction_item_group_users">
-                                        <thead>
-                                            <tr>
-                                                <th>T/R</th>
-                                                <th>F.I.SH</th>
-                                                <th>Telefon</th>
-                                                <th>Telefon++</th>
-                                                <th>Chegirma</th>
-                                                <th>Azolik Sanasi</th>
-                                                <th>Hujjat</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            {group["o'quvchilar"].map((data, id) => (
-                                                <tr>
-                                                    <td><span>{data.id}</span></td>
-                                                    <td><span>{data.ismi} {data.familiyasi} {data.sharifi}</span></td>
-                                                    <td><span>{data.telefon1}</span></td>
-                                                    <td><span>{data.telefon2}</span></td>
-                                                    <td><span>{data.chegirma}</span></td>
-                                                    <td><span>{data.azolik_sanasi}</span></td>
-                                                    <td><span><a href={data.hujjat} download={`${data.ismi}_${data.familiyasi}_${data.sharifi}.jpg`}>Yuklab olish</a></span></td>
-                                                </tr>
-                                            ))}
                                         </tbody>
                                     </table>
                                 </div>
@@ -538,7 +142,7 @@ export default function Static() {
                         </TabPanel>
                     </Tabs>
                 </article>
-            </section>
+            </section >
         </>
     )
 }
