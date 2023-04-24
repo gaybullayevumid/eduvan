@@ -11,7 +11,6 @@ import Operator from "./operator";
 import Students from "./students";
 import Directions from "./directions";
 import LessonTable from "./lesson_table";
-import LessonPlan from "./lesson_plan";
 
 
 export default function Home() {
@@ -24,9 +23,9 @@ export default function Home() {
             vMenuItem[i].addEventListener("click", () => {
                 vMenuArrow.style.top = `${i * 2.5}vw`
                 for (let a = 0; a < vMenuItem.length; a++) {
-                a == i 
-                    ? null
-                    : vMenuItemElement[a].classList.remove("active");
+                    a == i
+                        ? null
+                        : vMenuItemElement[a].classList.remove("active");
                 }
                 vMenuItemElement[i].classList.add("active");
             })
@@ -94,35 +93,27 @@ export default function Home() {
                                         <span className="data"><b>Davomat</b></span>
                                     </li>
                                 </Link>
-                                <Link to={"/lesson_plan"}>
-                                    <li>
-                                        <span className="icon">
-                                            <img src="img/svg/star_list.svg" alt="" />
-                                        </span>
-                                        <span className="data"><b>Dars Rejasi</b></span>
-                                    </li>
-                                </Link>
                             </ul>
                         </aside>
                         <main>
-                        <header>
-                            <div className="aside_mini">
-                                <img src="img/svg/menu.svg" alt="" />
-                            </div>
-                            <nav></nav>
-                            <ul className="header_buttons">
-                                <li>
-                                    <a href="#">
-                                        <img src="img/svg/notification.svg" alt="" />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="user_avatar" href="#">
-                                        <img src="img/veymay.jpg" alt="" />
-                                    </a>
-                                </li>
-                            </ul>
-                        </header>
+                            <header>
+                                <div className="aside_mini">
+                                    <img src="img/svg/menu.svg" alt="" />
+                                </div>
+                                <nav></nav>
+                                <ul className="header_buttons">
+                                    <li>
+                                        <a href="#">
+                                            <img src="img/svg/notification.svg" alt="" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a className="user_avatar" href="#">
+                                            <img src="img/veymay.jpg" alt="" />
+                                        </a>
+                                    </li>
+                                </ul>
+                            </header>
 
                             <Routes>
                                 <Route path="/" element={<Main />} />
@@ -130,7 +121,6 @@ export default function Home() {
                                 <Route path="/students" element={<Students />} />
                                 <Route path="/directions" element={<Directions />} />
                                 <Route path="/lesson_table" element={<LessonTable />} />
-                                <Route path="/lesson_plan" element={<LessonPlan />} />
                             </Routes>
 
                         </main>

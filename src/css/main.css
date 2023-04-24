@@ -31,7 +31,7 @@
   background-color: var(--main_dark_color);
   opacity: 1;
   box-shadow: 0 -100vh 0 100vh var(--main_color_transparent),
-  0 100vh 0 100vh var(--main_color_transparent);
+    0 100vh 0 100vh var(--main_color_transparent);
 }
 
 * {
@@ -95,7 +95,7 @@ table th,
   min-height: auto !important;
   text-transform: uppercase !important;
   color: #fff !important;
-  font-size: 1vw !important;
+  font-size: 0.8vw !important;
   background-color: var(--dark_color) !important;
 }
 

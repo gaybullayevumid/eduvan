@@ -3,7 +3,7 @@ import React, { useState } from "react";
 export default function AddStudent() {
   return (
     <>
-      <form action="inde.php" method="get">
+      <form action="#" method="get">
         <div className="input_area">
           <label htmlFor="">Ism</label>
           <input type="text" />
@@ -26,8 +26,8 @@ export default function AddStudent() {
         </div>
         <div className="input_area">
           <label htmlFor="">Yo'nalishi</label>
-          <select name="" id="">
-            <option value="" selected default disabled></option>
+          <select name="" id="" defaultValue={'DEFAULT'}>
+            <option value="DEFAULT" disabled>Tanlash..</option>
             <option value="">SAVODXONLIK</option>
             <option value="">FRONTEND</option>
             <option value="">BACKEND</option>
@@ -38,8 +38,8 @@ export default function AddStudent() {
         </div>
         <div className="input_area">
           <label htmlFor="">Kunlar</label>
-          <select name="" id="">
-            <option value="" selected default disabled></option>
+          <select name="" id="" defaultValue={'DEFAULT'}>
+            <option value="DEFAULT" disabled>Tanlash..</option>
             <option value="">JUFT KUNLAR</option>
             <option value="">TOQ KUNLAR</option>
             <option value="">HAR KUNI</option>
@@ -47,8 +47,8 @@ export default function AddStudent() {
         </div>
         <div className="input_area">
           <label htmlFor="">dars vaqti</label>
-          <select name="" id="">
-            <option value="" selected default disabled></option>
+          <select name="" id="" defaultValue={'DEFAULT'}>
+            <option value="DEFAULT" disabled>Tanlash..</option>
             <option value="">09:00 - 11:00</option>
             <option value="">11:00 - 13:00</option>
             <option value="">14:00 - 16:00</option>
@@ -58,8 +58,7 @@ export default function AddStudent() {
         <div className="input_area">
           <label htmlFor="">Chegirma</label>
           <select name="" id="">
-            <option value="" selected default disabled></option>
-            <option value="">-</option>
+            <option value="DEFAULT" disabled>Tanlash..</option>
             <option value="">Yoshlar daftari</option>
             <option value="">Temir daftar</option>
             <option value="">Chegirma 3</option>
@@ -68,8 +67,8 @@ export default function AddStudent() {
         </div>
         <div className="input_area">
           <label htmlFor="">Status</label>
-          <select name="" id="">
-            <option value="" selected default disabled></option>
+          <select name="" id="" defaultValue={'DEFAULT'}>
+            <option value="DEFAULT" disabled>Tanlash..</option>
             <option value="">Do'stlar</option>
             <option value="">Ijtimoiy Tarmoq</option>
             <option value="">WEB Sayt</option>
@@ -81,9 +80,8 @@ export default function AddStudent() {
           <input type="file" name="" id="" />
         </div>
         <br />
-        <button class="direction_group_add_button"><img src="img/svg/plus.svg" alt=""/>Ro'yxatga olish</button>
+        <button className="direction_group_add_button"><img src="img/svg/plus.svg" alt="" />Ro'yxatga olish</button>
       </form>
     </>
-    )
+  )
 }
-        

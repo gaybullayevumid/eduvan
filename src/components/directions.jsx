@@ -1,7 +1,6 @@
 import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import Table from './elements/table'
-import regTable from './elements/regTable'
 
 export default function Directions() {
     return (
@@ -118,43 +117,43 @@ export default function Directions() {
                                 Davomat
                             </Tab>
                         </TabList>
-                            <div className="direction_item_group_title">
-                                Frontend - N3
-                                <ul className="title_items">
-                                    <li>
-                                        <span>
-                                            <img src="./img/svg/check.svg" alt="" />
-                                        </span>
-                                        20.01.2023
-                                    </li>
-                                    <li>
-                                        <span>
-                                            <img src="./img/svg/days.svg" alt="" />
-                                        </span>
-                                        toq kunlar
-                                    </li>
-                                    <li>
-                                        <span>
-                                            <img src="./img/svg/time.svg" alt="" />
-                                        </span>
-                                        14:00-16:00
-                                    </li>
-                                    <li>
-                                        <span>
-                                            <img src="./img/svg/student.svg" alt="" />
-                                        </span>
-                                        15ta
-                                    </li>
-                                    <li>
-                                        <span>
-                                            <img src="./img/svg/user.svg" alt="" />
-                                        </span>
-                                        Muxriddin Rustamov Mirzayevich
-                                    </li>
-                                </ul>
-                            </div>
+                        <div className="direction_item_group_title">
+                            Frontend - N3
+                            <ul className="title_items">
+                                <li>
+                                    <span>
+                                        <img src="./img/svg/check.svg" alt="" />
+                                    </span>
+                                    20.01.2023
+                                </li>
+                                <li>
+                                    <span>
+                                        <img src="./img/svg/days.svg" alt="" />
+                                    </span>
+                                    toq kunlar
+                                </li>
+                                <li>
+                                    <span>
+                                        <img src="./img/svg/time.svg" alt="" />
+                                    </span>
+                                    14:00-16:00
+                                </li>
+                                <li>
+                                    <span>
+                                        <img src="./img/svg/student.svg" alt="" />
+                                    </span>
+                                    15ta
+                                </li>
+                                <li>
+                                    <span>
+                                        <img src="./img/svg/user.svg" alt="" />
+                                    </span>
+                                    Muxriddin Rustamov Mirzayevich
+                                </li>
+                            </ul>
+                        </div>
                         <TabPanel>
-                            <Table/>
+                            <Table />
                         </TabPanel>
                         <TabPanel>
                             {/* <table className="direction_item_group_users">
@@ -195,7 +194,7 @@ export default function Directions() {
                                     </tr>
                                 </tbody>
                             </table> */}
-                            
+
                         </TabPanel>
                         <TabPanel>
                             <table className="direction_item_group_users">

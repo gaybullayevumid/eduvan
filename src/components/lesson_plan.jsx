@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function LessonPlan() {
+function LessonPlan() {
     return (
         <>
             <section className="directions">
