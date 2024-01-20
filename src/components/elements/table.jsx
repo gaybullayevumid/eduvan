@@ -37,4 +37,4 @@ export default function DataTableExample() {
       </DataTable>
     </div>
   );
-};
+}
